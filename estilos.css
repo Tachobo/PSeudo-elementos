@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form {    
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 600px;
+  background-color: aquamarine;
+}
+div.form-group > label , 
+div.form-group > input {
+    display: block;
+    margin-bottom: 12px;
+}
+
+div.form-group:first-child {
+    padding-top: 20px;
+}
+
+input{
+    padding: 6px 3px;
+    width: 90%;
+}
+
+button {
+    display: block;
+    margin: 0 auto; 
+    background-color: brown;
+    color: #fff;
+    border: 1px solid  brown; 
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 3s ease-in-out, color 3s ease-in-out, border 3s ease-in-out;
+}
+
+button:hover {
+    background-color: #fff;
+    color: brown;
+    border: 1px solid brown; 
+    transition: background-color 8s, color 8s, border 8s;
+}

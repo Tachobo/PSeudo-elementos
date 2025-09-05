@@ -8,7 +8,18 @@ form {
   margin-top: 50px;
   width: 600px;
   background-color: aquamarine;
+  padding-bottom: 30px;
 }
+
+form:has(#datos:checked) {
+  background-color: lightcoral;
+}
+
+#datos {
+  margin-top: 8px;  
+  margin-bottom: 20px; 
+}
+
 div.form-group > label , 
 div.form-group > input {
     display: block;
@@ -26,7 +37,7 @@ input{
 
 button {
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
     background-color: brown;
     color: #fff;
     border: 1px solid  brown; 

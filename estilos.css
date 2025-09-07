@@ -20,6 +20,31 @@ form:has(#datos:checked) {
   margin-bottom: 20px; 
 }
 
+.oculto{
+  display: none;
+}
+
+label:only-of-type {
+  color: rgb(238, 7, 161);
+}
+
+p:first-of-type{
+  color: rgb(43, 226, 125);
+  font-weight: bold;
+}
+
+#mensaje:target{
+  display: block;
+  background-color: lightslategray;
+  width: 50%;
+  height: 25px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 20px;
+}
+
 div.form-group > label , 
 div.form-group > input {
     display: block;
@@ -28,7 +53,8 @@ div.form-group > input {
 }
 
 div.form-group:first-child {
-    padding-top: 20px;
+    padding-top: 30px;
+    background-color: rgba(163, 162, 230, 0.582);
 }
 
 label {
@@ -37,6 +63,21 @@ label {
 input{
     padding: 6px 3px;
     width: 90%;
+}
+
+input:invalid:focus  {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: #ffe6e6;
+  outline: none;
+}
+
+input:valid {
+  border: 2px solid green;
+  background-color: #e6ffe6;
+}
+input[type="email"] {
+  border: 2px solid blue;
+  background-color: #e0f0ff;
 }
 
 button {

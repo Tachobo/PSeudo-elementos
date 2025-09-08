@@ -3,12 +3,76 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+:root{
+  --color-label: rgb(238, 7, 161);
+  --color-label-checked: #ffffff;
+} 
+
+nav {
+  position: fixed; /* Fija la barra para que al hacer scroll no se mueva */
+  top: 0; /*pega la barra de navegacion arriba */
+  right: 0; /*pega la barra de navegacion a la derecha */
+  width: 160px; /*Hace que el ancho de la barra sea de 100px */
+  height: 100%; /*Hace que la barra ocupe todo el alto de la pantalla */
+  background-color: #f0f0f0; /*le pone color de fondo a la barra*/
+  padding: 1rem; /*Pone un espacio interno alrededor de las opciones de navegacion*/
+  text-align: center; /*alinea al centro el las las opciones de navegacion*/
+}
+
+nav ul {
+  list-style: none; /*Quita los puntos de la lista desordenada*/
+  padding: 0px; /*Elimina espacio interno*/
+  margin: 0px; /*Elimina espacio externo*/
+}
+
+nav li {
+  margin-bottom: 5rem; /*Pone un espacio entre las opciones de navegacion*/
+}
+/*hola*/
+nav a {
+  text-decoration: none; /*Quita el molesto subrayado de los enlaces*/
+  font-size: large; /*Aumenta el tamaño de la letra*/
+  color: #d37f00; /*Color de los enlaces*/
+  font-weight: bold; /*Pone el texto en negrita*/
+  transition: color 0.3s ease; /*Añade una transicion suave al cambiar de color*/
+}
+/* Cambia el color del texto a rojo al pasar el cursor */
+nav a:hover {
+   color: red;
+}
+
+
 form {    
   margin: 0 auto;
   margin-top: 50px;
   width: 600px;
   background-color: aquamarine;
   padding-bottom: 30px;
+}
+
+label::before {
+  content: "🍗";
+  margin-right: 10px;/*Hace una separacion entre el icono y el texto*/
+  font-size: 20px; /*Aumenta el tamaño del icono*/
+}
+
+a::before {
+  content: "🍕";
+  margin-right: 6px;
+}
+
+
+label[for="datos"] {
+  color: var(--color-label);
+}
+form:has(#datos:checked) label[for="datos"] {
+  color: var(--color-label-checked);
 }
 
 form:has(#datos:checked) {
@@ -37,13 +101,22 @@ p:first-of-type{
   display: block;
   background-color: lightslategray;
   width: 50%;
-  height: 25px;
+  height: 190px;
   margin: 0 auto;
   padding: 30px;
   text-align: center;
   padding-bottom: 50px;
   font-size: 20px;
 }
+
+p::after {
+  content: "";
+  display: block; /* La línea ocupa todo el ancho disponible */
+  height: 5px; /* Grosor de la línea */
+  background-color: #a71919; /* Color de la línea */
+  margin-top: 8px; /* Espacio entre el párrafo y la línea */
+}
+
 
 div.form-group > label , 
 div.form-group > input {
@@ -54,12 +127,12 @@ div.form-group > input {
 
 div.form-group:first-child {
     padding-top: 30px;
-    background-color: rgba(163, 162, 230, 0.582);
 }
 
 label {
     margin-left: 30px;
 }
+
 input{
     padding: 6px 3px;
     width: 90%;
@@ -80,7 +153,32 @@ input[type="email"] {
   background-color: #e0f0ff;
 }
 
+.input-icon {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  margin-left: 30px;
+}
+
+.input-icon::before {
+  content: "🍔";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%); /*Centra el icono verticalmente*/
+  pointer-events: none; /*impide que el icono bloquee el clic*/
+  font-size: 18px;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 6px 3px 6px 35px; /*Pone espacios siguiendo las manecillas del reloj, 6 arriba, 3 derecha, 6 abajo, 35 izquierda*/
+  box-sizing: border-box; /*Impide que el ancho del input*/
+}
+
 button {
+    position: relative; /* Necesario para que ::after se posicione respecto al botón */
+    z-index: 1;          /* Asegura que el botón esté por encima de la sombra */
     display: block;
     margin: 0 auto;
     background-color: brown;
@@ -99,3 +197,23 @@ button:hover {
     border: 1px solid brown; 
     transition: background-color 8s, color 8s, border 8s;
 }
+button::after {
+    content: ""; /*crea un pseudo-elemento vacio*/
+    position: absolute; /*Posiciona el pseudo-elemnto en relacion al boton*/
+    top: 5px; /*Desplaza el PsE 5px abajo*/  
+    left: 5px; /*Desplaza el PsE 5px a la derecha*/
+    width: 100%; /*Hace que el PsE tenga el mismo ancho que el boton*/
+    height: 100%; /*Hace que el PsE tenga la misma altura que el boton*/
+    background-color: rgba(0, 0, 0, 0.2); /*le pone un color de fondo a la sombra con transparencia*/
+    z-index: -1; /*Hace que la sombra quede detras del boton*/
+    border-radius: 10px; /*Hace que la sombra como el boton tengan las esquinas iguales*/
+}
+
+blockquote::before {
+  content: "“";
+}
+
+blockquote::after {
+  content: "”";
+}
+

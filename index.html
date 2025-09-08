@@ -7,16 +7,33 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <a href="#mensaje">Mostrar mensaje</a>
+    <header>
+        <nav>
+             <ul>
+             <li><a href="https://play.cpjourney.net/" target="_blank">Infancia</a></li>
+             <li><a href="https://ceper.uniandes.edu.co/files/2022/10/MANUAL-HTML-Y-CSS.pdf" target="_blank">Manual</a></li>
+             <li><a href="#formulario">Inicio</a></li>
+             </ul>
+        </nav>
+    </header>
+        <blockquote>
+            Siga bajo su propio riesgo
+        </blockquote>
+
+    <a href="#mensaje">Mostrar mensaje</a> <br>
      <div id="mensaje" class="oculto">
-       <p>Desde septiembre se siente que viene diciembre </p>
+       <p>Se lo advertí, me debe 5 mil</p><br>
+       <p>Desde septiembre se siente que viene diciembre</p><br>
+       <p>HAKUNA MATATA</p>
     </div>
     <a href="#formulario">Volver al formulario</a>
     <div id="formulario"></div>
     <form action="">
         <div class="form-group">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" pattern="[A-Za-z]+" required>  
+        <div class="input-icon">
+             <input type="text" id="nombre" pattern="[A-Za-z]+" required>
+        </div>
         </div>
         <div class="form-group">
             <label for="apellidos">Apellidos:</label>

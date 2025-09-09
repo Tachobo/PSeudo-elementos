@@ -47,8 +47,31 @@ nav a:hover {
    color: red;
 }
 
+.card {
+  right: 170px;
+  top: 10px;
+  background-color: rgb(175, 75, 75);
+  width: 100px;
+}
+
+div.card > button.eliminar { 
+  position: absolute;
+  top: 10px;
+  right: 180px;
+  background-color: red;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  
+  
+  text-align: center;
+  cursor: pointer;
+
+}
 
 form {    
+  position: relative;
   margin: 0 auto;
   margin-top: 50px;
   width: 600px;
@@ -79,13 +102,20 @@ form:has(#datos:checked) {
   background-color: lightcoral;
 }
 
+.contenedor img{
+  position: absolute;
+  height: 450px;
+  width: 350px;
+  display: block;
+  z-index: 0;
+  top: 140px;
+  left: 150px;
+}
+
+
 #datos {
   margin-top: 8px;  
   margin-bottom: 20px; 
-}
-
-.oculto{
-  display: none;
 }
 
 label:only-of-type {
@@ -97,11 +127,16 @@ p:first-of-type{
   font-weight: bold;
 }
 
+.oculto{
+  display: none;
+}
+
+
 #mensaje:target{
   display: block;
   background-color: lightslategray;
-  width: 50%;
-  height: 190px;
+  width: 40%;
+  height: 195px;
   margin: 0 auto;
   padding: 30px;
   text-align: center;
@@ -137,7 +172,6 @@ input{
     padding: 6px 3px;
     width: 90%;
 }
-
 input:invalid:focus  {
   border: 2px solid rgb(0, 0, 0);
   background-color: #ffe6e6;
@@ -197,6 +231,7 @@ button:hover {
     border: 1px solid brown; 
     transition: background-color 8s, color 8s, border 8s;
 }
+
 button::after {
     content: ""; /*crea un pseudo-elemento vacio*/
     position: absolute; /*Posiciona el pseudo-elemnto en relacion al boton*/

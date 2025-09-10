@@ -8,7 +8,14 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav-right">
+             <ul>
+             <li><a href="https://play.cpjourney.net/" target="_blank">Infancia</a></li>
+             <li><a href="https://ceper.uniandes.edu.co/files/2022/10/MANUAL-HTML-Y-CSS.pdf" target="_blank">Manual</a></li>
+             <li><a href="#formulario">Inicio</a></li>
+             </ul>
+        </nav>
+        <nav class="nav-top">
              <ul>
              <li><a href="https://play.cpjourney.net/" target="_blank">Infancia</a></li>
              <li><a href="https://ceper.uniandes.edu.co/files/2022/10/MANUAL-HTML-Y-CSS.pdf" target="_blank">Manual</a></li>
@@ -16,24 +23,11 @@
              </ul>
         </nav>
     </header>
-        <blockquote>
-            Siga bajo su propio riesgo
-        </blockquote>
-
-    <a href="#mensaje">Mostrar mensaje</a> <br>
-     <div id="mensaje" class="oculto">
-       <p>Se lo advertí, me debe 5 mil</p><br>
-       <p>Desde septiembre se siente que viene diciembre</p><br>
-       <p>HAKUNA MATATA</p>
-    </div>
-    <a href="#formulario">Volver</a>
-    <div id="formulario"></div>
     <div class="contenedor">
         <img src="Img/A.png" alt="Wake me up"> 
     </div>
     <div class="card">
         <button class="eliminar">✖</button>
-
     </div>
     <form action="">
         <div class="form-group">
@@ -56,7 +50,21 @@
         </div>
         <label for="datos">¿Guardar datos?</label>
         <input type="checkbox" id="datos">
-        <button>Validar</button>
+        <button class="validar">Validar</button>
     </form>
+    <blockquote>
+        Siga bajo su propio riesgo
+    </blockquote>
+    <a href="#mensaje">Mostrar mensaje</a> <br>
+     <div id="mensaje" class="oculto">
+       <p>Se lo advertí, me debe 5 mil</p><br>
+       <p>Desde septiembre se siente que viene diciembre</p><br>
+       <p>HAKUNA MATATA</p>
+    </div>
+    <a href="#formulario">Volver</a>
+    <div id="formulario"></div>
+    <!-- me toco buscar como era para cambiar de modo directamente en la pagina
+    porque no supe hacerlo desde inspeccionar -->
+    <button onclick="document.body.classList.toggle('dark-mode')">Cambiar tema</button>
 </body>
 </html>
